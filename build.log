@@ -1,0 +1,71 @@
+# `android.archs` not detected, instead `android.arch` is present.
+# `android.arch` will be removed and ignored in future.
+# If you're seeing this error, please migrate to `android.archs`.
+# Ensure build layout
+# Create directory /home/knot_photo_editor/.buildozer
+# Create directory /home/knot_photo_editor/bin
+# Create directory /home/knot_photo_editor/.buildozer/applibs
+# Create directory /home/knot_photo_editor/.buildozer/android/platform
+# Create directory /home/knot_photo_editor/.buildozer/android/app
+# Check configuration tokens
+# Preparing build
+# Check requirements for android
+# Search for Git (git)
+#  -> found at /usr/bin/git
+# Search for Cython (cython)
+#  -> found at /usr/local/bin/cython
+# Search for Java compiler (javac)
+#  -> found at /usr/bin/javac
+# Search for Java keytool (keytool)
+#  -> found at /usr/bin/keytool
+# Install platform
+# Run 'git clone -b master --single-branch https://github.com/kivy/python-for-android.git python-for-android' ...
+# Cwd /home/knot_photo_editor/.buildozer/android/platform
+Cloning into 'python-for-android'...
+Updating files:  37% (226/604)Updating files:  38% (230/604)Updating files:  39% (236/604)Updating files:  40% (242/604)Updating files:  41% (248/604)Updating files:  42% (254/604)Updating files:  43% (260/604)Updating files:  44% (266/604)Updating files:  45% (272/604)Updating files:  46% (278/604)Updating files:  47% (284/604)Updating files:  48% (290/604)Updating files:  49% (296/604)Updating files:  50% (302/604)Updating files:  51% (309/604)Updating files:  52% (315/604)Updating files:  53% (321/604)Updating files:  54% (327/604)Updating files:  55% (333/604)Updating files:  56% (339/604)Updating files:  57% (345/604)Updating files:  58% (351/604)Updating files:  59% (357/604)Updating files:  60% (363/604)Updating files:  61% (369/604)Updating files:  62% (375/604)Updating files:  63% (381/604)Updating files:  64% (387/604)Updating files:  65% (393/604)Updating files:  66% (399/604)Updating files:  67% (405/604)Updating files:  68% (411/604)Updating files:  69% (417/604)Updating files:  70% (423/604)Updating files:  71% (429/604)Updating files:  72% (435/604)Updating files:  73% (441/604)Updating files:  74% (447/604)Updating files:  75% (453/604)Updating files:  76% (460/604)Updating files:  77% (466/604)Updating files:  77% (471/604)Updating files:  78% (472/604)Updating files:  79% (478/604)Updating files:  80% (484/604)Updating files:  81% (490/604)Updating files:  82% (496/604)Updating files:  83% (502/604)Updating files:  84% (508/604)Updating files:  85% (514/604)Updating files:  86% (520/604)Updating files:  87% (526/604)Updating files:  88% (532/604)Updating files:  89% (538/604)Updating files:  90% (544/604)Updating files:  91% (550/604)Updating files:  92% (556/604)Updating files:  93% (562/604)Updating files:  94% (568/604)Updating files:  95% (574/604)Updating files:  96% (580/604)Updating files:  97% (586/604)Updating files:  98% (592/604)Updating files:  99% (598/604)Updating files: 100% (604/604)Updating files: 100% (604/604), done.
+# Run '/usr/bin/python3 -m pip install -q --user appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel~=0.43.0' ...
+# Cwd None
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+# Command failed: ('/usr/bin/python3', '-m', 'pip', 'install', '-q', '--user', 'appdirs', 'colorama>=0.3.3', 'jinja2', 'sh>=2, <3.0; sys_platform!="win32"', 'meson', 'ninja', 'build', 'toml', 'packaging', 'setuptools', 'wheel~=0.43.0')
+# Error code: 1
+# ENVIRONMENT:
+#     PWD = '/home/knot_photo_editor'
+#     ANDROIDNDK = '/usr/lib/android-sdk/ndk/26.3.11579264/android-ndk-r26c'
+#     HOME = '/root'
+#     LANG = 'C.UTF-8'
+#     LS_COLORS = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+#     ANDROID_DATA = '/home/'
+#     LESSCLOSE = '/usr/bin/lesspipe %s %s'
+#     TERM = 'xterm-256color'
+#     LESSOPEN = '| /usr/bin/lesspipe %s'
+#     SHLVL = '2'
+#     COMMAND_TO_EXEC = '/bin/bash -il'
+#     ANDROIDSDK = '/opt/android-sdk'
+#     PATH = '/root/.buildozer/android/platform/apache-ant-1.9.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+#     OLDPWD = '/home/knot_photo_editor'
+#     _ = '/usr/local/bin/buildozer'
+# 
+# Buildozer failed to execute the last command
+# The error might be hidden in the log above this error
+# Please read the full log, and search for it before
+# raising an issue with buildozer itself.
+# In case of a bug report, please add a full log with log_level = 2
