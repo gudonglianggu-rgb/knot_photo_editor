@@ -11,45 +11,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python 3.12
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y git zip unzip openjdk-17-jdk autoconf libtool pkg-config
+          sudo apt-get install -y git zip unzip openjdk-17-jdk autoconf libtool pkg-config python3-pip
+
+      - name: Install buildozer
+        run: |
           pip install buildozer cython
 
-      - name: Build with Buildozer
+      - name: Build APK
         run: |
           cd ${{ github.workspace }}
-          rm -f buildozer.spec
-          cat > buildozer.spec << 'SPECEOF'
-[app]
-title = 结绳·图修
-package.name = knotphotoeditor
-package.domain = org.knotphoto
-source.dir = .
-source.include_exts = py,png,jpg,jpeg,gif,ttf
-version = 1.0
-requirements = python3,kivy,pillow,opencv-python-headless,pytesseract,numpy
-orientation = portrait
-android.api = 34
-android.minapi = 21
-android.ndk_api = 21
-android.arch = arm64-v8a
-android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE,INTERNET
-android.wakelock = True
-android.accept_sdk_license = True
-[buildozer]
-log_level = 1
-warn_on_root = 0
-SPECEOF
+          ls -la buildozer.spec
           buildozer android debug 2>&1
 
-      - name: Upload APK
+      - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: knotphotoeditor-apk
