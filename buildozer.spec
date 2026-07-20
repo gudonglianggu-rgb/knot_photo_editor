@@ -10,10 +10,10 @@ orientation = portrait
 android.api = 34
 android.minapi = 21
 android.ndk_api = 21
-android.arch = arm64-v8a
+android.archs = arm64-v8a
 android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE,INTERNET
 android.wakelock = True
 android.accept_sdk_license = True
 [buildozer]
-log_level = 1
+log_level = 2
 warn_on_root = 0

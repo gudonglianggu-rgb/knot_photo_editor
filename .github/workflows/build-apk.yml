@@ -28,7 +28,6 @@ jobs:
       - name: Build APK
         run: |
           cd ${{ github.workspace }}
-          ls -la buildozer.spec
           buildozer android debug 2>&1
 
       - name: Upload APK artifact
